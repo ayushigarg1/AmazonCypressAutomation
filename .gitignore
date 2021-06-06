@@ -1,6 +1,5 @@
 # ignore results, reports, screenshots and videos
 cypress/results/*
-cypress/reports/*
 cypress/screenshots/*
 cypress/videos/*
 

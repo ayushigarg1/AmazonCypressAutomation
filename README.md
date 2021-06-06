@@ -5,6 +5,7 @@ This testing suite demonstrate testing scenarios using cypress
 ### Contents
  
 - [How to run testing suite on local machine](#-how-to-run-testing-suite-on-local-machine)
+- [Test execution report](#test-execution-report)
 - [Included Prettier](#included-prettier)
 - [Jmeter](#jmeter)
 - [Defect found](#defect-found)
@@ -58,7 +59,7 @@ git clone <repository-url>
 Navigate to cloned/copied folder using cmd
  
 ```bash
-cd <path-to-directory>/AmazonCypressAutomation
+cd <path-to-directory>\AmazonCypressAutomation
 ```
  
 Install node modules
@@ -70,15 +71,19 @@ npm install
 Run testing from cypress node modules using following command. This will execute the testing scenarios in sequential manner as mentioned in cypress.json in headless mode
  
 ```bash
-./node_modules/.bin/cypress run
+.\node_modules\.bin\cypress run
 ```
  
 If you want to run testing scenarios in headed mode, using following command
  
 ```bash
-./node_modules/.bin/cypress run --headed
+.\node_modules\.bin\cypress run --headed
 ```
- 
+
+## Test execution report
+
+View the test execution html report <a href="/mochaawesome-report/mochaawesome.html">here</a>.
+
 ## Included Prettier
  
 Prettier is installed in the node modules, once you execute npm install. It will locally install into the project

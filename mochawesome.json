@@ -1,0 +1,279 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-06T20:11:36.524Z",
+    "end": "2021-06-06T20:13:56.754Z",
+    "duration": 94190,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ffdf6ef-a3f0-4bf5-9ea8-28e122514d79",
+      "title": "",
+      "fullFile": "cypress/integration/amazonTestScenarios/dealsAndPromotions.spec.js",
+      "file": "cypress/integration/amazonTestScenarios/dealsAndPromotions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28349d19-f868-4655-93d9-13a7f08a8c1a",
+          "title": "Scenario 2: Check filter by department in Deals and Promotions Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the correct selected department",
+              "fullTitle": "Scenario 2: Check filter by department in Deals and Promotions Page Verify the correct selected department",
+              "timedOut": null,
+              "duration": 12263,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePageObjects = new _homePageObjects.default();\nconst dealsAndPromotionsObjects = new _dealsAndPromotionsObjects.default(); // click on Today's Deal\nhomePageObjects.getTodaysDealLink().click({\n  force: true\n}); // verify current url\ncy.url().should(\"include\", this.data.dealsURL); // click on Show more Department\ndealsAndPromotionsObjects.getSeeMoreDepartment().click(); // click on software department\ncy.getDepartment(this.data.softWareDepartment); // verify correct department is slected\ndealsAndPromotionsObjects.getCorrectDepartment().should(\"include.text\", this.data.softWareDepartment);",
+              "err": {},
+              "uuid": "5a2b48c1-2335-4bc0-af42-1a1282b78859",
+              "parentUUID": "28349d19-f868-4655-93d9-13a7f08a8c1a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5a2b48c1-2335-4bc0-af42-1a1282b78859"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12263,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fc66fc92-9a5e-4be2-9d7c-072f8960a1e5",
+      "title": "",
+      "fullFile": "cypress/integration/amazonTestScenarios/productPrice.spec.js",
+      "file": "cypress/integration/amazonTestScenarios/productPrice.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ceadf615-da2e-4982-8f0c-84bed6db366c",
+          "title": "Scenario 3: Verify the selected currency displayed for the products' price",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the selected currency displayed for the products' price",
+              "fullTitle": "Scenario 3: Verify the selected currency displayed for the products' price Verify the selected currency displayed for the products' price",
+              "timedOut": null,
+              "duration": 16567,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePageObjects = new _homePageObjects.default();\nconst customerPreferencesObjects = new _customerPreferencesObjects.default();\nconst productDetaislPageObject = new _productDetailsPageObject.default(); // click on Currency Settings\nhomePageObjects.getCurrencySettings().click(); // click on currency drop-down\ncustomerPreferencesObjects.getCurrencyDropdown().click(); // set currency\ncy.setCurrency(this.data.currencyAED); // verify correct currency is slected\ncustomerPreferencesObjects.getCurrencyDropdown().should(\"include.text\", this.data.currencyAED); // click on save Changes\ncustomerPreferencesObjects.getSaveButton().click(); // verify url contains selected currency\ncy.url().should(\"include\", this.data.currencyAED); // enter value is search text box\nhomePageObjects.getSearchTextBox().type(this.data.searchText); // click on search\nhomePageObjects.getSearchIcon().click(); // verify product price for selected currency\nproductDetaislPageObject.getProductListPrice().should(\"include.text\", this.data.currencyAED);",
+              "err": {},
+              "uuid": "64aff3a8-f212-4334-80ce-f4324392b007",
+              "parentUUID": "ceadf615-da2e-4982-8f0c-84bed6db366c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "64aff3a8-f212-4334-80ce-f4324392b007"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16567,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e46aed36-20d7-4992-ac20-5270dbb2742c",
+      "title": "",
+      "fullFile": "cypress/integration/amazonTestScenarios/productDetailPage.spec.js",
+      "file": "cypress/integration/amazonTestScenarios/productDetailPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "70205688-8233-458d-8e04-2108c0602db5",
+          "title": "Scenario 4 : Check Product Details Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Product Details Page",
+              "fullTitle": "Scenario 4 : Check Product Details Page Verify Product Details Page",
+              "timedOut": null,
+              "duration": 21442,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePageObjects = new _homePageObjects.default();\nconst productDetaislPageObject = new _productDetailsPageObject.default(); // get search dll element and set electronics in search DLL\nhomePageObjects.getSearchDll().select(this.data.electronicsSelectValue, {\n  force: true\n}); // enter value is search text box\nhomePageObjects.getSearchTextBox().type(this.data.searchAppleText).then(() => {\n  // click on search\n  homePageObjects.getSearchIcon().click();\n}); // verify page\ncy.url().should(\"include\", this.data.searchAppleText); // click on any product in product search page\nhomePageObjects.getProductDetailsPage().click();\ncy.get(\"body\").then($body => {\n  // check if ratings are present in the body\n  if ($body.find(\"#averageCustomerReviews_feature_div\").length > 0) {\n    // verify if ratings are present\n    productDetaislPageObject.getUserRatings().should(\"include.text\", this.data.ratings);\n  } // check if add to cart button is present\n\n  if ($body.find(\"#add-to-cart-button\").length > 0) {\n    // if add to cart button is present then\n    // validate if shipping details are present\n    // and the price is present\n    // and the product is instock\n    productDetaislPageObject.getAddToCartButton().then(element => {\n      // validating shipping details\n      productDetaislPageObject.getProductShipping().should(\"include.text\", this.data.shipping); // validate price is present\n      productDetaislPageObject.getPriceInsideBuyBox().should(\"exist\"); // validating product in stock\n      productDetaislPageObject.getProductInStockTag().should(\"include.text\", this.data.inStock); // click on add to cart button\n      productDetaislPageObject.getAddToCartButton().click(); // validate checkout button consist of the checkout text\n      productDetaislPageObject.getCheckoutButton().should(\"include.text\", this.data.proceedToCheckout);\n    });\n  } // if add to cart button is not present then find if\n  // product stock is not present by verifying\n  // if wishlist main button is present\n  else if ($body.find(\"#wishListMainButton\").length > 0) {\n      // if wishlist main button is present then validate\n      // shipping details should not be present\n      // and price block should not be present\n      // and stock is currently unavailable\n      productDetaislPageObject.getAddToWishlistButton().then(element => {\n        // validate product shipping does not exist\n        productDetaislPageObject.getProductShipping().should(\"not.exist\"); // validate price does not exist\n        productDetaislPageObject.getPriceInsideBuyBox().should(\"not.exist\"); // validate product stock is not available\n        productDetaislPageObject.getProductInStockTag().should(\"include.text\", this.data.outOfStock);\n      });\n    } // if add to cart button is not present and product stock is not present\n    // then verify that the product cannot be shipped by validating ship from\n    // does not exist\n    else if ($body.find(\"#add-to-cart-button\").length === 0 || cy.get(\"#mir-layout-DELIVERY_BLOCK-slot-DELIVERY_MESSAGE > .a-color-error\").contains(\"cannot be shipped \")) {\n        // if add to cart is not present or delivery message is not present\n        // then validate if ship from details are not present\n        cy.get(\"#mir-layout-DELIVERY_BLOCK-slot-DELIVERY_MESSAGE > .a-color-error\").then(element => {\n          // validate shipping text does not exist\n          productDetaislPageObject.getShippingDetails().should(\"not.include.text\", this.data.shipping); // validate price exist\n          productDetaislPageObject.getPriceInsideBuyBox().should(\"exist\");\n        });\n      }\n});",
+              "err": {},
+              "uuid": "806af7a8-7f51-4914-b2f1-2596bf408671",
+              "parentUUID": "70205688-8233-458d-8e04-2108c0602db5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "806af7a8-7f51-4914-b2f1-2596bf408671"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "102764b1-5924-46d3-835b-4a74d5d7affe",
+      "title": "",
+      "fullFile": "cypress/integration/amazonTestScenarios/smartHomeTelevisions.spec.js",
+      "file": "cypress/integration/amazonTestScenarios/smartHomeTelevisions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7ee874c-366a-4224-b0f1-ec81a79ef6b4",
+          "title": "Scenario 1: Check the total displayed number of results for category Smart Home | Televisions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the total number of results match the total displayed products",
+              "fullTitle": "Scenario 1: Check the total displayed number of results for category Smart Home | Televisions Verify the total number of results match the total displayed products",
+              "timedOut": null,
+              "duration": 43918,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const homePageObjects = new _homePageObjects.default();\nconst televisionPageObjects = new _televisionPageObjects.default();\nconst productListPageObjects = new _productListPageObjects.default(); // click on all categories link on Home page\nhomePageObjects.getAllCategoriesLink().click(); // click on smart home link in menu\nhomePageObjects.getCategoriesLink(this.data.smartHomeCategory).as(\"smartHomeCategory\"); // waiting for smart home category to be found\ncy.wait(1000); // scrolling so that category does not hide under menu\ncy.get(\"#hmenu-content > ul.hmenu.hmenu-visible\").scrollTo(\"0%\", \"25%\"); // waiting for scrolling to be completed\ncy.wait(1000);\ncy.get(\"@smartHomeCategory\").click(); // cy.selectCategory(\"Smart Home\");\n// click on home entertainment in menu\nhomePageObjects.getCategoriesLink(this.data.homeEntertainmentCategory).click(); // verify if the url contains home-entertainment\ncy.url().should(\"include\", this.data.homeEntertainmentURL); // click on home entertainment sub category Televisions\ncy.selectHomeEntertainmentSubCategory(this.data.smartTelevisionsCategory); // verify if the page is of smart televisions\ntelevisionPageObjects.getTelevisionPageHeading().should(\"include.text\", this.data.televisionHeading); // navigate to all results\ntelevisionPageObjects.getSeeAllResultsElement().click(); // defining recursive funtion to click on next button is visible\nvar productsCount = 0;\nconst clickNext = () => {\n  // getting products page count\n  productListPageObjects.getProducts().then(products => {\n    productsCount = productsCount + products.length;\n  }).then(() => {\n    cy.log(\"Product Count on current page: \" + productsCount); // checking if page has sponsered products\n    // if sponsered products are present, reducing the count of Product counts\n    cy.get(\"body\").then($body => {\n      var sponsoredProductsCount = $body.find('[data-component-type=\"sp-sponsored-result\"]').length;\n      if (sponsoredProductsCount > 0) {\n        productsCount = productsCount - sponsoredProductsCount;\n        cy.log(\"Product Count on page after removing sponsered products: \" + productsCount);\n      }\n    }).then(() => {\n      // getting pagination next button\n      productListPageObjects.getPaginationNextButton().then(element => {\n        // if pagination button is not disabled click on the button\n        if (!element.hasClass(\"a-disabled\")) {\n          const nextPageLink = element.children(1).attr(\"href\"); // Using visit instead of clicking link, so that cypress waits for full page load\n          cy.visit(Cypress.env(\"url\") + nextPageLink); // recursively call clickNext button\n          clickNext();\n        }\n      });\n    });\n  });\n}; // clicking next page button of pagination\n\nclickNext(); // get search result count text\nvar totalCount = 0;\nproductListPageObjects.getSearchResultCountTextElement().then(element => {\n  const countText = element.text();\n  totalCount = countText.split(\" \")[2];\n  cy.log(totalCount);\n  expect(Number(totalCount)).to.equal(productsCount);\n});",
+              "err": {},
+              "uuid": "5f843f7e-c2dc-45ea-9a86-1704a9c31ef5",
+              "parentUUID": "e7ee874c-366a-4224-b0f1-ec81a79ef6b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f843f7e-c2dc-45ea-9a86-1704a9c31ef5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43918,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
