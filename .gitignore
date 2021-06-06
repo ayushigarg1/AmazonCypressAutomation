@@ -1,0 +1,11 @@
+# ignore results, reports, screenshots and videos
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
+
+# Node modules directories
+node_modules/
+
+# Mac hidden files
+.DS_Store

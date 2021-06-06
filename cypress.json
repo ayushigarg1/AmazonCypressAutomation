@@ -1,0 +1,11 @@
+{
+  "env": {
+    "url": "https://www.amazon.com/"
+  },
+  "testFiles": [
+    "amazonTestScenarios/smartHomeTelevisions.spec.js",
+    "amazonTestScenarios/dealsAndPromotions.spec.js",
+    "amazonTestScenarios/productPrice.spec.js",
+    "amazonTestScenarios/productDetailPage.spec.js"
+  ]
+}
