@@ -82,7 +82,7 @@ If you want to run testing scenarios in headed mode, using following command
 
 ## Test execution report
 
-Test execution html report is available in folder mochaswersome-report folder with mochaawesome.html
+Test execution html report is available in folder mochaswersome-report folder with name mochaawesome.html
 
 View the test execution html report <a href="https://htmlpreview.github.io/?https://github.com/ayushigarg1/AmazonCypressAutomation/blob/main/mochawesome-report/mochawesome.html" target="_blank">here</a>, but it may take good amount of time to load.
 
