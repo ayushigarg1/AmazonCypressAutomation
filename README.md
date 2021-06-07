@@ -144,7 +144,7 @@ Identified a defect with displayed search count result for same search. Attached
 
 ## Jenkins Integration
 
-This suite can be integrated with Jenkins using following steps, I have attached the screenshot of Jenkins integrations in "jenkins-screenshots" folder
+This suite can be integrated with Jenkins using following steps, I have attached the screenshot of Jenkins integrations in **jenkins-screenshots** folder
 
 - Configure package.json scripts to for short commands to run tests. I have configure following in package.json
 
