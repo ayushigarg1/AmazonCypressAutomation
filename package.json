@@ -13,8 +13,11 @@
     "prettier": "2.3.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run",
+    "headedTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "firefoxTest": "npm run test -- --browser firefox"
   },
-  "author": "",
+  "author": "Ayushi Garg",
   "license": "ISC"
 }
