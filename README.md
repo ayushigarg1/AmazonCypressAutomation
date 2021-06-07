@@ -36,7 +36,7 @@ Install node modules
 npm install
 ```
 
-Run testing from cypress node modules using following command. This will execute the testing scenarios in sequential manner as mentioned in cypress.json in headless mode
+Run from cypress node modules bin directory using following command. This will execute the testing scenarios in sequential manner as mentioned in cypress.json in headless mode
 
 ```bash
 ./node_modules/.bin/cypress run
@@ -70,7 +70,7 @@ Install node modules
 npm install
 ```
 
-Run testing from cypress node modules using following command. This will execute the testing scenarios in sequential manner as mentioned in cypress.json in headless mode
+Run from cypress node modules bin directory using following command. This will execute the testing scenarios in sequential manner as mentioned in cypress.json in headless mode
 
 ```bash
 .\node_modules\.bin\cypress run
@@ -140,7 +140,7 @@ Use following steps to execute jmx file
 
 ## Defect Found
 
-Identified a defect with displayed search count result for same search. Attached word document in defect folder with the details and steps to product it
+Identified a defect with displayed search count result for same search. Attached word document in **defect** folder with the details and steps to reproduce it
 
 ## Jenkins Integration
 
@@ -161,11 +161,11 @@ This suite can be integrated with Jenkins using following steps, I have attached
 - Once Jenkins installed, click on New Item
 - Provide a name for Jenkins Build e.g. AmazonCypressAutomation
 - Select Freestyle project
-- Under description select "This project is parameterized" and then select "Choice Parameter" from "Add Parameter" dropdown
+- Under description select **This project is parameterized** and then select **Choice Parameter** from **Add Parameter** dropdown
 - Provide a name for choice parameter e.g. script
-- Under choices enter scripts key as set in Step 1
-- Under source code management select Git and provide repository URL https://github.com/ayushigarg1/AmazonCypressAutomation and Branch to build as main
-- Under Build, select "Execute shell" from "Add build step"
+- Under **choices** enter scripts key as set in Step 1
+- Under **source code management** select Git and provide repository URL as https://github.com/ayushigarg1/AmazonCypressAutomation and Branch to build as **main**
+- Under **Build**, select **Execute shell** from **Add build step**
 - Under command write
   ```bash
   npm install
@@ -174,6 +174,6 @@ This suite can be integrated with Jenkins using following steps, I have attached
 - Once you click on save changes, Jenkins script is ready
 
 #### To run Jenkins build
-- Select "Build with Parameters" from left pane
+- Select **Build with Parameters** from left pane
 - Select required script to be executed
 - Build will start triggering, to veiw log, select build in progress and console output from left pane
