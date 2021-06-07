@@ -21,7 +21,7 @@ Install NodeJS from https://nodejs.org/en/download/ if not already installed.
 Clone git repo or download source code
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ayushigarg1/AmazonCypressAutomation.git
 ```
 
 Navigate to cloned folder using terminal
@@ -55,7 +55,7 @@ Install NodeJS from https://nodejs.org/en/download/ if not already installed.
 Clone git repo via Github desktop, Gitbash or download source code
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ayushigarg1/AmazonCypressAutomation.git
 ```
 
 Navigate to cloned/copied folder using cmd
