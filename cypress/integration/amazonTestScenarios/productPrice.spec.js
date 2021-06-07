@@ -40,9 +40,13 @@ describe("Scenario 3: Verify the selected currency displayed for the products' p
     // verify url contains selected currency
     cy.url().should("include", this.data.currencyAED);
     // enter value is search text box
-    homePageObjects.getSearchTextBox().type(this.data.searchText);
-    // click on search
-    homePageObjects.getSearchIcon().click();
+    homePageObjects
+      .getSearchTextBox()
+      .type(this.data.searchText)
+      .then(() => {
+        // click on search
+        homePageObjects.getSearchIcon().click();
+      });
     // verify product price for selected currency
     productDetaislPageObject
       .getProductListPrice()
